@@ -1,0 +1,62 @@
+# Lesson 3
+#Python Lists
+
+#Python List Transformation
+#task 1
+grades = [85, 90, 78, 88, 76, 95, 89, 80, 72, 93]
+
+#reverse is set to true
+grades.sort(reverse = True)
+print(grades)
+#task 2
+average_grades = sum(grades)/len(grades)
+print ("Average grade is ", average_grades)
+
+
+#Advanced List Methods and Identity Operators
+#task 1
+
+submitted = ["Alice", "Bob", "Charlie", "David"]
+attended = ["Charlie", "Eve", "Alice", "Frank"]
+
+both_list = []
+
+for student in submitted:
+    if student in attended:
+        both_list.append(student)
+print(both_list)
+
+# Advanced Slicing Techniques
+# task 2
+greater_100_degrees = []
+temperatures = [72, 75, 78, 79, 80, 81, 82, 83, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106]
+print(temperatures[7:14])
+
+
+for temperature in temperatures:
+    if temperature > 100:
+        greater_100_degrees.append(temperature)
+print(greater_100_degrees)
+
+
+# Lesson 4
+# Python Loop Statements
+import random
+moods = ["Happy", "Sad", "Energetic", "Calm"]
+print(random.choice(moods))
+week_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+for i in range(len(week_days)):
+    print("On",week_days[i],"I felt", random.choice(moods))
+
+# Double Scoop with Nested Loops
+
+import random
+moods = ["Happy", "Sad", "Energetic", "Calm"]
+print(random.choice(moods))
+week_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+time_of_day = ["morning", "afternoon", "evening"]
+
+for day in week_days:
+    for time in time_of_day:
+        print(f"On {day} {time} you felt {random.choice(moods)}.")
